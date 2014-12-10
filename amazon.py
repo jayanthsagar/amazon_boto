@@ -15,21 +15,23 @@ def list_instances():
 	for i in range(0,len(reservations)):
 		print reservations[i].instances
 def instance_details():
+	instances_id = []
 	for i in range(0,len(reservations)):
 		inst = reservations[i].instances
 		
 		id = str(inst).split(':')[1].strip(']')
-		print id # I am refering every instance using its id
+		instances_id.append(id)
+		#print id # I am refering every instance using its id
 		#subprocess.check_output("aws ec2 describe-instances --instance-ids "+id)
 		#os.system("aws ec2 describe-instances --instance-ids "+id)
 		result = subprocess.Popen("aws ec2 describe-instances --instance-ids "+id,stdout=subprocess.PIPE, shell=True)
 		(output,status) = result.communicate()
-		instance_json = json.dumps(output) #encoding
-		print type(instance_json)
-		inst_json = json.loads(instance_json) #decoding
-		print type(inst_json)
+		instance_dumps_json = json.dumps(output) #encoding
+		#print type(instance_json)
+		instance_loads_json = json.loads(instance_dumps_json) #decoding
+		#print type(inst_json)
 		f = open('instances/'+id+'.json','w')
-		f.write(inst_json)
+		f.write(instance_loads_json)
 		f.close()
 		
 		#print status
@@ -38,12 +40,12 @@ def instance_details():
 		#	print instance.instance_type
 		#	print instance.placement
 		#	print instance.state
-			
+	return instances_id	
 
 
 #list_reservations()
 #list_instances()
-instance_details()
+print instance_details() #returns a list of all instance ids and write instance info as json to instances folder
 def instance_address():
 	address = boto.ec2.address.Address()
 	print address
