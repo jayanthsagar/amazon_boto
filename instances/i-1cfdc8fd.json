@@ -1,0 +1,111 @@
+{
+    "Reservations": [
+        {
+            "ReservationId": "r-98dc7b76",
+            "Groups": [],
+            "OwnerId": "816397707103",
+            "Instances": [
+                {
+                    "KeyName": "LabsKey",
+                    "Tags": [
+                        {
+                            "Key": "Name",
+                            "Value": "test-nrpescript"
+                        }
+                    ],
+                    "SubnetId": "subnet-7902f252",
+                    "ProductCodes": [
+                        {
+                            "ProductCodeId": "aw0evgkw8e5c1q413zgy5pjce",
+                            "ProductCodeType": "marketplace"
+                        }
+                    ],
+                    "VpcId": "vpc-bb5bcfde",
+                    "VirtualizationType": "hvm",
+                    "StateReason": {
+                        "Code": "Client.UserInitiatedShutdown",
+                        "Message": "Client.UserInitiatedShutdown: User initiated shutdown"
+                    },
+                    "AmiLaunchIndex": 0,
+                    "NetworkInterfaces": [
+                        {
+                            "Description": "Primary network interface",
+                            "PrivateIpAddress": "172.17.236.193",
+                            "Status": "in-use",
+                            "OwnerId": "816397707103",
+                            "Attachment": {
+                                "DeviceIndex": 0,
+                                "Status": "attached",
+                                "AttachTime": "2014-12-04T10:45:20.000Z",
+                                "DeleteOnTermination": true,
+                                "AttachmentId": "eni-attach-e6e89e9b"
+                            },
+                            "SourceDestCheck": true,
+                            "VpcId": "vpc-bb5bcfde",
+                            "PrivateIpAddresses": [
+                                {
+                                    "PrivateDnsName": "ip-172-17-236-193.ec2.internal",
+                                    "PrivateIpAddress": "172.17.236.193",
+                                    "Primary": true
+                                }
+                            ],
+                            "NetworkInterfaceId": "eni-c9cae4e3",
+                            "SubnetId": "subnet-7902f252",
+                            "PrivateDnsName": "ip-172-17-236-193.ec2.internal",
+                            "Groups": [
+                                {
+                                    "GroupId": "sg-eb7c9d8f",
+                                    "GroupName": "LabsSecurity"
+                                }
+                            ]
+                        }
+                    ],
+                    "PrivateDnsName": "ip-172-17-236-193.ec2.internal",
+                    "PublicDnsName": null,
+                    "LaunchTime": "2014-12-04T11:39:50.000Z",
+                    "EbsOptimized": false,
+                    "StateTransitionReason": "User initiated (2014-12-04 14:45:02 GMT)",
+                    "Hypervisor": "xen",
+                    "RootDeviceName": "/dev/sda1",
+                    "State": {
+                        "Name": "stopped",
+                        "Code": 80
+                    },
+                    "PrivateIpAddress": "172.17.236.193",
+                    "RootDeviceType": "ebs",
+                    "ImageId": "ami-96a818fe",
+                    "SourceDestCheck": true,
+                    "SecurityGroups": [
+                        {
+                            "GroupId": "sg-eb7c9d8f",
+                            "GroupName": "LabsSecurity"
+                        }
+                    ],
+                    "Placement": {
+                        "AvailabilityZone": "us-east-1c",
+                        "Tenancy": "default",
+                        "GroupName": null
+                    },
+                    "ClientToken": "141768980030290626",
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "Architecture": "x86_64",
+                    "InstanceType": "t2.micro",
+                    "InstanceId": "i-1cfdc8fd",
+                    "BlockDeviceMappings": [
+                        {
+                            "Ebs": {
+                                "DeleteOnTermination": false,
+                                "Status": "attached",
+                                "VolumeId": "vol-9afd9e82",
+                                "AttachTime": "2014-12-04T10:45:23.000Z"
+                            },
+                            "DeviceName": "/dev/sda1"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,112 @@
+{
+    "Reservations": [
+        {
+            "Instances": [
+                {
+                    "ImageId": "ami-cc5be9a4",
+                    "LaunchTime": "2014-12-03T03:48:01.000Z",
+                    "State": {
+                        "Name": "stopped",
+                        "Code": 80
+                    },
+                    "KernelId": "aki-919dcaf8",
+                    "PrivateIpAddress": "172.17.4.202",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/sda1",
+                            "Ebs": {
+                                "VolumeId": "vol-c11e87d9",
+                                "AttachTime": "2014-12-01T10:14:58.000Z",
+                                "DeleteOnTermination": true,
+                                "Status": "attached"
+                            }
+                        }
+                    ],
+                    "AmiLaunchIndex": 0,
+                    "PrivateDnsName": "ip-172-17-4-202.ec2.internal",
+                    "Hypervisor": "xen",
+                    "SubnetId": "subnet-7902f252",
+                    "Tags": [
+                        {
+                            "Value": "Sripathi_testVM3(ubuntu)",
+                            "Key": "Name"
+                        }
+                    ],
+                    "Placement": {
+                        "AvailabilityZone": "us-east-1c",
+                        "GroupName": null,
+                        "Tenancy": "default"
+                    },
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "Sripathi_test",
+                            "GroupId": "sg-e408e880"
+                        }
+                    ],
+                    "InstanceType": "t1.micro",
+                    "ClientToken": "141742899193893202",
+                    "KeyName": "Test_VMs",
+                    "ProductCodes": [
+                        {
+                            "ProductCodeId": "5hoheke3dcdw953i7sq087tpb",
+                            "ProductCodeType": "marketplace"
+                        }
+                    ],
+                    "StateReason": {
+                        "Message": "Client.UserInitiatedShutdown: User initiated shutdown",
+                        "Code": "Client.UserInitiatedShutdown"
+                    },
+                    "StateTransitionReason": "User initiated (2014-12-03 16:06:43 GMT)",
+                    "RootDeviceType": "ebs",
+                    "PublicDnsName": null,
+                    "EbsOptimized": false,
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "Architecture": "x86_64",
+                    "NetworkInterfaces": [
+                        {
+                            "SourceDestCheck": true,
+                            "PrivateIpAddress": "172.17.4.202",
+                            "VpcId": "vpc-bb5bcfde",
+                            "Description": "Primary network interface",
+                            "Groups": [
+                                {
+                                    "GroupName": "Sripathi_test",
+                                    "GroupId": "sg-e408e880"
+                                }
+                            ],
+                            "OwnerId": "816397707103",
+                            "Status": "in-use",
+                            "PrivateDnsName": "ip-172-17-4-202.ec2.internal",
+                            "SubnetId": "subnet-7902f252",
+                            "NetworkInterfaceId": "eni-800523aa",
+                            "Attachment": {
+                                "DeviceIndex": 0,
+                                "DeleteOnTermination": true,
+                                "AttachTime": "2014-12-01T10:14:54.000Z",
+                                "AttachmentId": "eni-attach-075d357a",
+                                "Status": "attached"
+                            },
+                            "PrivateIpAddresses": [
+                                {
+                                    "PrivateDnsName": "ip-172-17-4-202.ec2.internal",
+                                    "Primary": true,
+                                    "PrivateIpAddress": "172.17.4.202"
+                                }
+                            ]
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "RootDeviceName": "/dev/sda1",
+                    "VpcId": "vpc-bb5bcfde",
+                    "VirtualizationType": "paravirtual",
+                    "InstanceId": "i-a60b5247"
+                }
+            ],
+            "Groups": [],
+            "OwnerId": "816397707103",
+            "ReservationId": "r-efee3d01"
+        }
+    ]
+}

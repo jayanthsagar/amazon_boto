@@ -1,6 +1,9 @@
 import boto.ec2
-import os
+#import os
+import sys
 import subprocess
+import json
+#import commands
 conn = boto.ec2.connect_to_region("us-east-1")
 print conn
 reservations = conn.get_all_reservations()
@@ -15,9 +18,21 @@ def instance_details():
 	for i in range(0,len(reservations)):
 		inst = reservations[i].instances
 		
-		id = str(inst[0]).split(':')[1]
+		id = str(inst).split(':')[1].strip(']')
 		print id
-		os.system("aws ec2 describe-instances --instance-ids "+id)
+		#subprocess.check_output("aws ec2 describe-instances --instance-ids "+id)
+		#os.system("aws ec2 describe-instances --instance-ids "+id)
+		result = subprocess.Popen("aws ec2 describe-instances --instance-ids "+id,stdout=subprocess.PIPE, shell=True)
+		(output,status) = result.communicate()
+		instance_json = json.dumps(output)
+		print type(instance_json)
+		inst_json = json.loads(instance_json)
+		print inst_json
+		f = open('instances/'+id+'.json','w')
+		f.write(inst_json)
+		f.close()
+		
+		#print status
 		#for j in range(0,len(inst)):
 		#	instance = inst[j]
 		#	print instance.instance_type

@@ -1,0 +1,106 @@
+{
+    "Reservations": [
+        {
+            "Groups": [],
+            "OwnerId": "816397707103",
+            "Instances": [
+                {
+                    "RootDeviceType": "ebs",
+                    "LaunchTime": "2014-12-06T04:33:53.000Z",
+                    "State": {
+                        "Name": "stopped",
+                        "Code": 80
+                    },
+                    "PublicDnsName": null,
+                    "InstanceId": "i-00b88ce1",
+                    "Placement": {
+                        "Tenancy": "default",
+                        "GroupName": null,
+                        "AvailabilityZone": "us-east-1c"
+                    },
+                    "Hypervisor": "xen",
+                    "SecurityGroups": [
+                        {
+                            "GroupId": "sg-97253df2",
+                            "GroupName": "ssh,hhtp,https,custom ICMP rule(all)"
+                        }
+                    ],
+                    "KeyName": "LabsKey",
+                    "VirtualizationType": "hvm",
+                    "BlockDeviceMappings": [
+                        {
+                            "Ebs": {
+                                "DeleteOnTermination": true,
+                                "AttachTime": "2014-12-04T15:34:06.000Z",
+                                "VolumeId": "vol-b45032ac",
+                                "Status": "attached"
+                            },
+                            "DeviceName": "/dev/sda1"
+                        }
+                    ],
+                    "NetworkInterfaces": [
+                        {
+                            "NetworkInterfaceId": "eni-c67c55ec",
+                            "PrivateIpAddress": "172.17.2.6",
+                            "VpcId": "vpc-bb5bcfde",
+                            "Status": "in-use",
+                            "PrivateIpAddresses": [
+                                {
+                                    "PrivateIpAddress": "172.17.2.6",
+                                    "PrivateDnsName": "ip-172-17-2-6.ec2.internal",
+                                    "Primary": true
+                                }
+                            ],
+                            "OwnerId": "816397707103",
+                            "SubnetId": "subnet-7902f252",
+                            "Attachment": {
+                                "DeviceIndex": 0,
+                                "DeleteOnTermination": true,
+                                "AttachTime": "2014-12-04T15:34:02.000Z",
+                                "Status": "attached",
+                                "AttachmentId": "eni-attach-3005744d"
+                            },
+                            "Description": "Primary network interface",
+                            "Groups": [
+                                {
+                                    "GroupId": "sg-97253df2",
+                                    "GroupName": "ssh,hhtp,https,custom ICMP rule(all)"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "PrivateDnsName": "ip-172-17-2-6.ec2.internal"
+                        }
+                    ],
+                    "ImageId": "ami-3ce05354",
+                    "PrivateDnsName": "ip-172-17-2-6.ec2.internal",
+                    "StateTransitionReason": "User initiated (2014-12-09 12:03:40 GMT)",
+                    "PrivateIpAddress": "172.17.2.6",
+                    "VpcId": "vpc-bb5bcfde",
+                    "StateReason": {
+                        "Message": "Client.UserInitiatedShutdown: User initiated shutdown",
+                        "Code": "Client.UserInitiatedShutdown"
+                    },
+                    "InstanceType": "t2.micro",
+                    "RootDeviceName": "/dev/sda1",
+                    "ProductCodes": [],
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "SubnetId": "subnet-7902f252",
+                    "Tags": [
+                        {
+                            "Value": "YogeshLDAP-auth-test",
+                            "Key": "Name"
+                        }
+                    ],
+                    "Architecture": "x86_64",
+                    "ClientToken": "iQVmK1417707240998",
+                    "SourceDestCheck": true,
+                    "AmiLaunchIndex": 0,
+                    "EbsOptimized": false
+                }
+            ],
+            "ReservationId": "r-601eb98e"
+        }
+    ]
+}

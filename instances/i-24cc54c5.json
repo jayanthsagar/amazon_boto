@@ -1,0 +1,111 @@
+{
+    "Reservations": [
+        {
+            "Instances": [
+                {
+                    "SourceDestCheck": false,
+                    "VpcId": "vpc-bb5bcfde",
+                    "EbsOptimized": false,
+                    "Placement": {
+                        "Tenancy": "default",
+                        "AvailabilityZone": "us-east-1c",
+                        "GroupName": null
+                    },
+                    "Tags": [
+                        {
+                            "Key": "Name",
+                            "Value": "oVZ kernel test"
+                        }
+                    ],
+                    "RootDeviceName": "/dev/sda1",
+                    "ImageId": "ami-c2a818aa",
+                    "PublicDnsName": null,
+                    "NetworkInterfaces": [
+                        {
+                            "Status": "in-use",
+                            "VpcId": "vpc-bb5bcfde",
+                            "Description": "Primary network interface",
+                            "PrivateDnsName": "ip-172-17-4-21.ec2.internal",
+                            "NetworkInterfaceId": "eni-d79dd1fd",
+                            "SubnetId": "subnet-7902f252",
+                            "Attachment": {
+                                "AttachTime": "2014-11-20T13:37:22.000Z",
+                                "Status": "attached",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "AttachmentId": "eni-attach-33cf534e"
+                            },
+                            "PrivateIpAddresses": [
+                                {
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-172-17-4-21.ec2.internal",
+                                    "PrivateIpAddress": "172.17.4.21"
+                                }
+                            ],
+                            "OwnerId": "816397707103",
+                            "Groups": [
+                                {
+                                    "GroupId": "sg-97253df2",
+                                    "GroupName": "ssh,hhtp,https,custom ICMP rule(all)"
+                                }
+                            ],
+                            "SourceDestCheck": false,
+                            "PrivateIpAddress": "172.17.4.21"
+                        }
+                    ],
+                    "SubnetId": "subnet-7902f252",
+                    "SecurityGroups": [
+                        {
+                            "GroupId": "sg-97253df2",
+                            "GroupName": "ssh,hhtp,https,custom ICMP rule(all)"
+                        }
+                    ],
+                    "BlockDeviceMappings": [
+                        {
+                            "Ebs": {
+                                "AttachTime": "2014-11-20T13:37:25.000Z",
+                                "Status": "attached",
+                                "VolumeId": "vol-9bc67a83",
+                                "DeleteOnTermination": false
+                            },
+                            "DeviceName": "/dev/sda1"
+                        }
+                    ],
+                    "StateTransitionReason": "User initiated (2014-11-25 04:20:15 GMT)",
+                    "ProductCodes": [
+                        {
+                            "ProductCodeId": "6x5jmcajty9edm3f211pqjfn2",
+                            "ProductCodeType": "marketplace"
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
+                    "State": {
+                        "Code": 80,
+                        "Name": "stopped"
+                    },
+                    "PrivateDnsName": "ip-172-17-4-21.ec2.internal",
+                    "RootDeviceType": "ebs",
+                    "AmiLaunchIndex": 0,
+                    "InstanceId": "i-24cc54c5",
+                    "InstanceType": "t2.micro",
+                    "StateReason": {
+                        "Code": "Client.UserInitiatedShutdown",
+                        "Message": "Client.UserInitiatedShutdown: User initiated shutdown"
+                    },
+                    "Hypervisor": "xen",
+                    "KeyName": "LabsKey",
+                    "ClientToken": "kizRm1416490642122",
+                    "LaunchTime": "2014-11-25T04:11:14.000Z",
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "PrivateIpAddress": "172.17.4.21",
+                    "Architecture": "x86_64"
+                }
+            ],
+            "OwnerId": "816397707103",
+            "ReservationId": "r-6aae4584",
+            "Groups": []
+        }
+    ]
+}

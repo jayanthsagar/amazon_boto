@@ -1,0 +1,111 @@
+{
+    "Reservations": [
+        {
+            "Instances": [
+                {
+                    "NetworkInterfaces": [
+                        {
+                            "PrivateIpAddresses": [
+                                {
+                                    "PrivateDnsName": "ip-172-17-2-100.ec2.internal",
+                                    "PrivateIpAddress": "172.17.2.100",
+                                    "Primary": true
+                                }
+                            ],
+                            "PrivateIpAddress": "172.17.2.100",
+                            "SubnetId": "subnet-7902f252",
+                            "Status": "in-use",
+                            "SourceDestCheck": true,
+                            "OwnerId": "816397707103",
+                            "NetworkInterfaceId": "eni-ea5409c0",
+                            "Groups": [
+                                {
+                                    "GroupId": "sg-c42139a1",
+                                    "GroupName": "default"
+                                }
+                            ],
+                            "Description": "Primary network interface",
+                            "Attachment": {
+                                "DeviceIndex": 0,
+                                "Status": "attached",
+                                "AttachmentId": "eni-attach-1491f069",
+                                "DeleteOnTermination": true,
+                                "AttachTime": "2014-11-26T07:06:57.000Z"
+                            },
+                            "PrivateDnsName": "ip-172-17-2-100.ec2.internal",
+                            "VpcId": "vpc-bb5bcfde"
+                        }
+                    ],
+                    "EbsOptimized": false,
+                    "PrivateIpAddress": "172.17.2.100",
+                    "RootDeviceName": "/dev/sda1",
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "ProductCodes": [
+                        {
+                            "ProductCodeId": "6x5jmcajty9edm3f211pqjfn2",
+                            "ProductCodeType": "marketplace"
+                        }
+                    ],
+                    "Hypervisor": "xen",
+                    "KeyName": "soumya-virginia",
+                    "Placement": {
+                        "AvailabilityZone": "us-east-1c",
+                        "Tenancy": "default",
+                        "GroupName": null
+                    },
+                    "PublicDnsName": null,
+                    "InstanceType": "t2.micro",
+                    "StateTransitionReason": "User initiated (2014-12-03 16:07:10 GMT)",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/sda1",
+                            "Ebs": {
+                                "Status": "attached",
+                                "DeleteOnTermination": false,
+                                "AttachTime": "2014-11-26T07:07:00.000Z",
+                                "VolumeId": "vol-3e59d126"
+                            }
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "InstanceId": "i-e23a4003",
+                    "AmiLaunchIndex": 0,
+                    "SubnetId": "subnet-7902f252",
+                    "Tags": [
+                        {
+                            "Value": "SoumyaAwstatsTest",
+                            "Key": "Name"
+                        }
+                    ],
+                    "ImageId": "ami-c2a818aa",
+                    "StateReason": {
+                        "Code": "Client.UserInitiatedShutdown",
+                        "Message": "Client.UserInitiatedShutdown: User initiated shutdown"
+                    },
+                    "ClientToken": "WlNmd1416985616866",
+                    "VirtualizationType": "hvm",
+                    "LaunchTime": "2014-12-03T05:43:28.000Z",
+                    "SecurityGroups": [
+                        {
+                            "GroupId": "sg-c42139a1",
+                            "GroupName": "default"
+                        }
+                    ],
+                    "RootDeviceType": "ebs",
+                    "Architecture": "x86_64",
+                    "PrivateDnsName": "ip-172-17-2-100.ec2.internal",
+                    "State": {
+                        "Code": 80,
+                        "Name": "stopped"
+                    },
+                    "VpcId": "vpc-bb5bcfde"
+                }
+            ],
+            "Groups": [],
+            "ReservationId": "r-c9519027",
+            "OwnerId": "816397707103"
+        }
+    ]
+}

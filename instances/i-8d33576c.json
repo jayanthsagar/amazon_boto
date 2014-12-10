@@ -1,0 +1,106 @@
+{
+    "Reservations": [
+        {
+            "Groups": [],
+            "ReservationId": "r-5a6e9bb4",
+            "Instances": [
+                {
+                    "StateReason": {
+                        "Code": "Client.UserInitiatedShutdown",
+                        "Message": "Client.UserInitiatedShutdown: User initiated shutdown"
+                    },
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-3ce05354",
+                    "PrivateDnsName": "ip-172-17-4-11.ec2.internal",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/sda1",
+                            "Ebs": {
+                                "VolumeId": "vol-65f54d7d",
+                                "DeleteOnTermination": false,
+                                "Status": "attached",
+                                "AttachTime": "2014-12-08T05:14:41.000Z"
+                            }
+                        }
+                    ],
+                    "InstanceType": "t2.micro",
+                    "VpcId": "vpc-bb5bcfde",
+                    "Architecture": "x86_64",
+                    "EbsOptimized": false,
+                    "ClientToken": "IJQxf1416548208538",
+                    "Tags": [
+                        {
+                            "Value": "Shanker-Script_for_RP",
+                            "Key": "Name"
+                        }
+                    ],
+                    "State": {
+                        "Code": 80,
+                        "Name": "stopped"
+                    },
+                    "PublicDnsName": null,
+                    "SecurityGroups": [
+                        {
+                            "GroupId": "sg-97253df2",
+                            "GroupName": "ssh,hhtp,https,custom ICMP rule(all)"
+                        }
+                    ],
+                    "Hypervisor": "xen",
+                    "NetworkInterfaces": [
+                        {
+                            "VpcId": "vpc-bb5bcfde",
+                            "NetworkInterfaceId": "eni-1fa8e635",
+                            "Groups": [
+                                {
+                                    "GroupId": "sg-97253df2",
+                                    "GroupName": "ssh,hhtp,https,custom ICMP rule(all)"
+                                }
+                            ],
+                            "PrivateDnsName": "ip-172-17-4-11.ec2.internal",
+                            "PrivateIpAddress": "172.17.4.11",
+                            "SubnetId": "subnet-7902f252",
+                            "Description": "Primary network interface",
+                            "Status": "in-use",
+                            "OwnerId": "816397707103",
+                            "Attachment": {
+                                "AttachTime": "2014-11-21T05:36:49.000Z",
+                                "DeviceIndex": 0,
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "AttachmentId": "eni-attach-7d6bf400"
+                            },
+                            "SourceDestCheck": true,
+                            "PrivateIpAddresses": [
+                                {
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-172-17-4-11.ec2.internal",
+                                    "PrivateIpAddress": "172.17.4.11"
+                                }
+                            ]
+                        }
+                    ],
+                    "Placement": {
+                        "Tenancy": "default",
+                        "GroupName": null,
+                        "AvailabilityZone": "us-east-1c"
+                    },
+                    "RootDeviceType": "ebs",
+                    "KeyName": "LabsKey",
+                    "PrivateIpAddress": "172.17.4.11",
+                    "LaunchTime": "2014-12-10T05:57:02.000Z",
+                    "ProductCodes": [],
+                    "SubnetId": "subnet-7902f252",
+                    "VirtualizationType": "hvm",
+                    "InstanceId": "i-8d33576c",
+                    "RootDeviceName": "/dev/sda1",
+                    "StateTransitionReason": "User initiated (2014-12-10 12:15:01 GMT)",
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "SourceDestCheck": true
+                }
+            ],
+            "OwnerId": "816397707103"
+        }
+    ]
+}

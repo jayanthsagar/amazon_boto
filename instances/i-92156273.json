@@ -1,0 +1,111 @@
+{
+    "Reservations": [
+        {
+            "Instances": [
+                {
+                    "PrivateDnsName": "ip-172-17-4-200.ec2.internal",
+                    "InstanceType": "t2.micro",
+                    "StateReason": {
+                        "Code": "Client.UserInitiatedShutdown",
+                        "Message": "Client.UserInitiatedShutdown: User initiated shutdown"
+                    },
+                    "PublicDnsName": null,
+                    "NetworkInterfaces": [
+                        {
+                            "PrivateDnsName": "ip-172-17-4-200.ec2.internal",
+                            "Attachment": {
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "AttachmentId": "eni-attach-5771142a",
+                                "Status": "attached",
+                                "AttachTime": "2014-11-24T08:20:06.000Z"
+                            },
+                            "VpcId": "vpc-bb5bcfde",
+                            "OwnerId": "816397707103",
+                            "SourceDestCheck": true,
+                            "Description": "Primary network interface",
+                            "Groups": [
+                                {
+                                    "GroupId": "sg-e408e880",
+                                    "GroupName": "Sripathi_test"
+                                }
+                            ],
+                            "Status": "in-use",
+                            "NetworkInterfaceId": "eni-27fea90d",
+                            "PrivateIpAddresses": [
+                                {
+                                    "PrivateIpAddress": "172.17.4.200",
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-172-17-4-200.ec2.internal"
+                                }
+                            ],
+                            "PrivateIpAddress": "172.17.4.200",
+                            "SubnetId": "subnet-7902f252"
+                        }
+                    ],
+                    "SecurityGroups": [
+                        {
+                            "GroupId": "sg-e408e880",
+                            "GroupName": "Sripathi_test"
+                        }
+                    ],
+                    "PrivateIpAddress": "172.17.4.200",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/sda1",
+                            "Ebs": {
+                                "DeleteOnTermination": false,
+                                "VolumeId": "vol-b9e566a1",
+                                "AttachTime": "2014-11-24T08:20:09.000Z",
+                                "Status": "attached"
+                            }
+                        }
+                    ],
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "KeyName": "Test_VMs",
+                    "InstanceId": "i-92156273",
+                    "AmiLaunchIndex": 0,
+                    "SubnetId": "subnet-7902f252",
+                    "State": {
+                        "Name": "stopped",
+                        "Code": 80
+                    },
+                    "RootDeviceName": "/dev/sda1",
+                    "ImageId": "ami-c2a818aa",
+                    "VirtualizationType": "hvm",
+                    "SourceDestCheck": true,
+                    "ClientToken": "RkqRd1416817204085",
+                    "StateTransitionReason": "User initiated (2014-12-10 08:55:24 GMT)",
+                    "Architecture": "x86_64",
+                    "Placement": {
+                        "AvailabilityZone": "us-east-1c",
+                        "GroupName": null,
+                        "Tenancy": "default"
+                    },
+                    "Hypervisor": "xen",
+                    "EbsOptimized": false,
+                    "ProductCodes": [
+                        {
+                            "ProductCodeType": "marketplace",
+                            "ProductCodeId": "6x5jmcajty9edm3f211pqjfn2"
+                        }
+                    ],
+                    "RootDeviceType": "ebs",
+                    "VpcId": "vpc-bb5bcfde",
+                    "Tags": [
+                        {
+                            "Key": "Name",
+                            "Value": "Sripathi_testVM"
+                        }
+                    ],
+                    "LaunchTime": "2014-12-10T06:52:07.000Z"
+                }
+            ],
+            "Groups": [],
+            "OwnerId": "816397707103",
+            "ReservationId": "r-8237ce6c"
+        }
+    ]
+}
