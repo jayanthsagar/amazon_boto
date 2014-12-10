@@ -3,105 +3,105 @@
         {
             "Instances": [
                 {
-                    "ImageId": "ami-cc5be9a4",
-                    "LaunchTime": "2014-12-03T03:48:01.000Z",
-                    "State": {
-                        "Name": "stopped",
-                        "Code": 80
-                    },
-                    "KernelId": "aki-919dcaf8",
-                    "PrivateIpAddress": "172.17.4.202",
-                    "BlockDeviceMappings": [
-                        {
-                            "DeviceName": "/dev/sda1",
-                            "Ebs": {
-                                "VolumeId": "vol-c11e87d9",
-                                "AttachTime": "2014-12-01T10:14:58.000Z",
-                                "DeleteOnTermination": true,
-                                "Status": "attached"
-                            }
-                        }
-                    ],
-                    "AmiLaunchIndex": 0,
-                    "PrivateDnsName": "ip-172-17-4-202.ec2.internal",
-                    "Hypervisor": "xen",
-                    "SubnetId": "subnet-7902f252",
-                    "Tags": [
-                        {
-                            "Value": "Sripathi_testVM3(ubuntu)",
-                            "Key": "Name"
-                        }
-                    ],
+                    "SourceDestCheck": true,
                     "Placement": {
+                        "Tenancy": "default",
                         "AvailabilityZone": "us-east-1c",
-                        "GroupName": null,
-                        "Tenancy": "default"
+                        "GroupName": null
                     },
-                    "SecurityGroups": [
-                        {
-                            "GroupName": "Sripathi_test",
-                            "GroupId": "sg-e408e880"
-                        }
-                    ],
-                    "InstanceType": "t1.micro",
-                    "ClientToken": "141742899193893202",
-                    "KeyName": "Test_VMs",
                     "ProductCodes": [
                         {
                             "ProductCodeId": "5hoheke3dcdw953i7sq087tpb",
                             "ProductCodeType": "marketplace"
                         }
                     ],
+                    "ImageId": "ami-cc5be9a4",
+                    "NetworkInterfaces": [
+                        {
+                            "PrivateDnsName": "ip-172-17-4-202.ec2.internal",
+                            "PrivateIpAddresses": [
+                                {
+                                    "PrivateIpAddress": "172.17.4.202",
+                                    "PrivateDnsName": "ip-172-17-4-202.ec2.internal",
+                                    "Primary": true
+                                }
+                            ],
+                            "Groups": [
+                                {
+                                    "GroupId": "sg-e408e880",
+                                    "GroupName": "Sripathi_test"
+                                }
+                            ],
+                            "VpcId": "vpc-bb5bcfde",
+                            "SubnetId": "subnet-7902f252",
+                            "PrivateIpAddress": "172.17.4.202",
+                            "OwnerId": "816397707103",
+                            "Description": "Primary network interface",
+                            "NetworkInterfaceId": "eni-800523aa",
+                            "Status": "in-use",
+                            "Attachment": {
+                                "DeleteOnTermination": true,
+                                "AttachTime": "2014-12-01T10:14:54.000Z",
+                                "DeviceIndex": 0,
+                                "Status": "attached",
+                                "AttachmentId": "eni-attach-075d357a"
+                            },
+                            "SourceDestCheck": true
+                        }
+                    ],
+                    "InstanceType": "t1.micro",
+                    "KeyName": "Test_VMs",
+                    "State": {
+                        "Code": 80,
+                        "Name": "stopped"
+                    },
+                    "SecurityGroups": [
+                        {
+                            "GroupId": "sg-e408e880",
+                            "GroupName": "Sripathi_test"
+                        }
+                    ],
+                    "StateTransitionReason": "User initiated (2014-12-03 16:06:43 GMT)",
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "LaunchTime": "2014-12-03T03:48:01.000Z",
+                    "RootDeviceName": "/dev/sda1",
+                    "RootDeviceType": "ebs",
+                    "PrivateDnsName": "ip-172-17-4-202.ec2.internal",
+                    "VpcId": "vpc-bb5bcfde",
+                    "Architecture": "x86_64",
+                    "InstanceId": "i-a60b5247",
+                    "KernelId": "aki-919dcaf8",
                     "StateReason": {
                         "Message": "Client.UserInitiatedShutdown: User initiated shutdown",
                         "Code": "Client.UserInitiatedShutdown"
                     },
-                    "StateTransitionReason": "User initiated (2014-12-03 16:06:43 GMT)",
-                    "RootDeviceType": "ebs",
-                    "PublicDnsName": null,
-                    "EbsOptimized": false,
-                    "Monitoring": {
-                        "State": "disabled"
-                    },
-                    "Architecture": "x86_64",
-                    "NetworkInterfaces": [
+                    "Tags": [
                         {
-                            "SourceDestCheck": true,
-                            "PrivateIpAddress": "172.17.4.202",
-                            "VpcId": "vpc-bb5bcfde",
-                            "Description": "Primary network interface",
-                            "Groups": [
-                                {
-                                    "GroupName": "Sripathi_test",
-                                    "GroupId": "sg-e408e880"
-                                }
-                            ],
-                            "OwnerId": "816397707103",
-                            "Status": "in-use",
-                            "PrivateDnsName": "ip-172-17-4-202.ec2.internal",
-                            "SubnetId": "subnet-7902f252",
-                            "NetworkInterfaceId": "eni-800523aa",
-                            "Attachment": {
-                                "DeviceIndex": 0,
-                                "DeleteOnTermination": true,
-                                "AttachTime": "2014-12-01T10:14:54.000Z",
-                                "AttachmentId": "eni-attach-075d357a",
-                                "Status": "attached"
-                            },
-                            "PrivateIpAddresses": [
-                                {
-                                    "PrivateDnsName": "ip-172-17-4-202.ec2.internal",
-                                    "Primary": true,
-                                    "PrivateIpAddress": "172.17.4.202"
-                                }
-                            ]
+                            "Key": "Name",
+                            "Value": "Sripathi_testVM3(ubuntu)"
                         }
                     ],
-                    "SourceDestCheck": true,
-                    "RootDeviceName": "/dev/sda1",
-                    "VpcId": "vpc-bb5bcfde",
+                    "PublicDnsName": null,
+                    "AmiLaunchIndex": 0,
+                    "SubnetId": "subnet-7902f252",
+                    "Hypervisor": "xen",
+                    "ClientToken": "141742899193893202",
                     "VirtualizationType": "paravirtual",
-                    "InstanceId": "i-a60b5247"
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/sda1",
+                            "Ebs": {
+                                "DeleteOnTermination": true,
+                                "AttachTime": "2014-12-01T10:14:58.000Z",
+                                "VolumeId": "vol-c11e87d9",
+                                "Status": "attached"
+                            }
+                        }
+                    ],
+                    "EbsOptimized": false,
+                    "PrivateIpAddress": "172.17.4.202"
                 }
             ],
             "Groups": [],

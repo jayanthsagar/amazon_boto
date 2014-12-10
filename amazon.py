@@ -19,15 +19,15 @@ def instance_details():
 		inst = reservations[i].instances
 		
 		id = str(inst).split(':')[1].strip(']')
-		print id
+		print id # I am refering every instance using its id
 		#subprocess.check_output("aws ec2 describe-instances --instance-ids "+id)
 		#os.system("aws ec2 describe-instances --instance-ids "+id)
 		result = subprocess.Popen("aws ec2 describe-instances --instance-ids "+id,stdout=subprocess.PIPE, shell=True)
 		(output,status) = result.communicate()
-		instance_json = json.dumps(output)
+		instance_json = json.dumps(output) #encoding
 		print type(instance_json)
-		inst_json = json.loads(instance_json)
-		print inst_json
+		inst_json = json.loads(instance_json) #decoding
+		print type(inst_json)
 		f = open('instances/'+id+'.json','w')
 		f.write(inst_json)
 		f.close()

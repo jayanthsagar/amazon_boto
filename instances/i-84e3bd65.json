@@ -1,116 +1,116 @@
 {
     "Reservations": [
         {
-            "Groups": [],
-            "OwnerId": "816397707103",
             "ReservationId": "r-62fd2e8c",
+            "OwnerId": "816397707103",
+            "Groups": [],
             "Instances": [
                 {
-                    "PrivateDnsName": "ip-172-17-4-201.ec2.internal",
+                    "AmiLaunchIndex": 0,
                     "NetworkInterfaces": [
                         {
-                            "PrivateIpAddress": "172.17.4.201",
-                            "PrivateDnsName": "ip-172-17-4-201.ec2.internal",
-                            "Association": {
-                                "PublicIp": "54.172.202.213",
-                                "PublicDnsName": "ec2-54-172-202-213.compute-1.amazonaws.com",
-                                "IpOwnerId": "amazon"
-                            },
-                            "Attachment": {
-                                "DeleteOnTermination": true,
-                                "AttachTime": "2014-12-01T10:00:09.000Z",
-                                "AttachmentId": "eni-attach-c35830be",
-                                "DeviceIndex": 0,
-                                "Status": "attached"
-                            },
-                            "Status": "in-use",
-                            "VpcId": "vpc-bb5bcfde",
-                            "OwnerId": "816397707103",
+                            "NetworkInterfaceId": "eni-9a3b1db0",
                             "Description": "Primary network interface",
-                            "SubnetId": "subnet-7902f252",
+                            "Association": {
+                                "IpOwnerId": "amazon",
+                                "PublicDnsName": "ec2-54-172-202-213.compute-1.amazonaws.com",
+                                "PublicIp": "54.172.202.213"
+                            },
                             "Groups": [
                                 {
                                     "GroupName": "Sripathi_test",
                                     "GroupId": "sg-e408e880"
                                 }
                             ],
-                            "NetworkInterfaceId": "eni-9a3b1db0",
+                            "VpcId": "vpc-bb5bcfde",
+                            "SubnetId": "subnet-7902f252",
+                            "PrivateDnsName": "ip-172-17-4-201.ec2.internal",
                             "SourceDestCheck": true,
+                            "Attachment": {
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "AttachTime": "2014-12-01T10:00:09.000Z",
+                                "AttachmentId": "eni-attach-c35830be",
+                                "DeviceIndex": 0
+                            },
+                            "OwnerId": "816397707103",
+                            "Status": "in-use",
+                            "PrivateIpAddress": "172.17.4.201",
                             "PrivateIpAddresses": [
                                 {
                                     "Association": {
-                                        "PublicIp": "54.172.202.213",
+                                        "IpOwnerId": "amazon",
                                         "PublicDnsName": "ec2-54-172-202-213.compute-1.amazonaws.com",
-                                        "IpOwnerId": "amazon"
+                                        "PublicIp": "54.172.202.213"
                                     },
-                                    "PrivateIpAddress": "172.17.4.201",
                                     "PrivateDnsName": "ip-172-17-4-201.ec2.internal",
+                                    "PrivateIpAddress": "172.17.4.201",
                                     "Primary": true
                                 }
                             ]
                         }
                     ],
+                    "KeyName": "Test_VMs",
+                    "State": {
+                        "Code": 16,
+                        "Name": "running"
+                    },
+                    "PublicIpAddress": "54.172.202.213",
+                    "Placement": {
+                        "AvailabilityZone": "us-east-1c",
+                        "GroupName": null,
+                        "Tenancy": "default"
+                    },
+                    "EbsOptimized": false,
+                    "PrivateDnsName": "ip-172-17-4-201.ec2.internal",
                     "BlockDeviceMappings": [
                         {
                             "DeviceName": "/dev/sda1",
                             "Ebs": {
-                                "VolumeId": "vol-c966ffd1",
-                                "AttachTime": "2014-12-01T10:00:13.000Z",
+                                "Status": "attached",
                                 "DeleteOnTermination": false,
-                                "Status": "attached"
+                                "AttachTime": "2014-12-01T10:00:13.000Z",
+                                "VolumeId": "vol-c966ffd1"
                             }
                         }
                     ],
+                    "RootDeviceName": "/dev/sda1",
+                    "PrivateIpAddress": "172.17.4.201",
                     "ProductCodes": [
                         {
                             "ProductCodeType": "marketplace",
                             "ProductCodeId": "6x5jmcajty9edm3f211pqjfn2"
                         }
                     ],
-                    "State": {
-                        "Name": "running",
-                        "Code": 16
-                    },
-                    "PublicDnsName": "ec2-54-172-202-213.compute-1.amazonaws.com",
-                    "RootDeviceType": "ebs",
-                    "VpcId": "vpc-bb5bcfde",
-                    "AmiLaunchIndex": 0,
-                    "VirtualizationType": "hvm",
-                    "InstanceId": "i-84e3bd65",
-                    "SourceDestCheck": true,
-                    "ImageId": "ami-c2a818aa",
-                    "Monitoring": {
-                        "State": "disabled"
-                    },
-                    "PublicIpAddress": "54.172.202.213",
-                    "RootDeviceName": "/dev/sda1",
-                    "PrivateIpAddress": "172.17.4.201",
-                    "InstanceType": "t2.micro",
-                    "EbsOptimized": false,
+                    "StateTransitionReason": null,
                     "SecurityGroups": [
                         {
                             "GroupName": "Sripathi_test",
                             "GroupId": "sg-e408e880"
                         }
                     ],
-                    "Hypervisor": "xen",
                     "LaunchTime": "2014-12-10T08:56:16.000Z",
+                    "VirtualizationType": "hvm",
                     "Tags": [
                         {
-                            "Value": "Sripathi_testVM2(centos)",
-                            "Key": "Name"
+                            "Key": "Name",
+                            "Value": "Sripathi_testVM2(centos)"
                         }
                     ],
-                    "ClientToken": "141742812660583485",
-                    "KeyName": "Test_VMs",
-                    "Placement": {
-                        "Tenancy": "default",
-                        "GroupName": null,
-                        "AvailabilityZone": "us-east-1c"
-                    },
-                    "StateTransitionReason": null,
+                    "InstanceId": "i-84e3bd65",
+                    "RootDeviceType": "ebs",
+                    "Architecture": "x86_64",
+                    "VpcId": "vpc-bb5bcfde",
+                    "Hypervisor": "xen",
+                    "PublicDnsName": "ec2-54-172-202-213.compute-1.amazonaws.com",
+                    "ImageId": "ami-c2a818aa",
                     "SubnetId": "subnet-7902f252",
-                    "Architecture": "x86_64"
+                    "SourceDestCheck": true,
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "InstanceType": "t2.micro",
+                    "ClientToken": "141742812660583485"
                 }
             ]
         }

@@ -1,97 +1,31 @@
 {
     "Reservations": [
         {
+            "Groups": [],
+            "OwnerId": "816397707103",
+            "ReservationId": "r-8b4b8e65",
             "Instances": [
                 {
-                    "BlockDeviceMappings": [
+                    "ClientToken": "141690434182321997",
+                    "ProductCodes": [
                         {
-                            "DeviceName": "/dev/sda1",
-                            "Ebs": {
-                                "AttachTime": "2014-11-25T08:33:00.000Z",
-                                "DeleteOnTermination": true,
-                                "Status": "attached",
-                                "VolumeId": "vol-423fb35a"
-                            }
-                        }
-                    ],
-                    "RootDeviceType": "ebs",
-                    "LaunchTime": "2014-11-27T05:21:19.000Z",
-                    "PublicDnsName": "ec2-54-165-137-69.compute-1.amazonaws.com",
-                    "Tags": [
-                        {
-                            "Value": "Nagios-test",
-                            "Key": "Name"
+                            "ProductCodeType": "marketplace",
+                            "ProductCodeId": "aw0evgkw8e5c1q413zgy5pjce"
                         }
                     ],
                     "PrivateDnsName": "ip-172-17-187-223.ec2.internal",
-                    "NetworkInterfaces": [
-                        {
-                            "Status": "in-use",
-                            "Association": {
-                                "PublicDnsName": "ec2-54-165-137-69.compute-1.amazonaws.com",
-                                "PublicIp": "54.165.137.69",
-                                "IpOwnerId": "amazon"
-                            },
-                            "OwnerId": "816397707103",
-                            "Groups": [
-                                {
-                                    "GroupName": "nagios-security-group",
-                                    "GroupId": "sg-c614f5a2"
-                                }
-                            ],
-                            "Description": "Primary network interface",
-                            "PrivateDnsName": "ip-172-17-187-223.ec2.internal",
-                            "SubnetId": "subnet-7902f252",
-                            "PrivateIpAddresses": [
-                                {
-                                    "Association": {
-                                        "PublicDnsName": "ec2-54-165-137-69.compute-1.amazonaws.com",
-                                        "PublicIp": "54.165.137.69",
-                                        "IpOwnerId": "amazon"
-                                    },
-                                    "PrivateIpAddress": "172.17.187.223",
-                                    "Primary": true,
-                                    "PrivateDnsName": "ip-172-17-187-223.ec2.internal"
-                                }
-                            ],
-                            "Attachment": {
-                                "Status": "attached",
-                                "AttachTime": "2014-11-25T08:32:57.000Z",
-                                "DeviceIndex": 0,
-                                "DeleteOnTermination": true,
-                                "AttachmentId": "eni-attach-9e5d3ae3"
-                            },
-                            "VpcId": "vpc-bb5bcfde",
-                            "NetworkInterfaceId": "eni-0789d92d",
-                            "SourceDestCheck": true,
-                            "PrivateIpAddress": "172.17.187.223"
-                        }
-                    ],
-                    "ClientToken": "141690434182321997",
-                    "InstanceId": "i-c58ef324",
-                    "VirtualizationType": "hvm",
-                    "StateTransitionReason": null,
-                    "ProductCodes": [
-                        {
-                            "ProductCodeId": "aw0evgkw8e5c1q413zgy5pjce",
-                            "ProductCodeType": "marketplace"
-                        }
-                    ],
-                    "PrivateIpAddress": "172.17.187.223",
-                    "AmiLaunchIndex": 0,
-                    "ImageId": "ami-96a818fe",
-                    "State": {
-                        "Code": 16,
-                        "Name": "running"
-                    },
-                    "KeyName": "LabsKey",
-                    "RootDeviceName": "/dev/sda1",
-                    "InstanceType": "t2.micro",
-                    "SubnetId": "subnet-7902f252",
                     "Monitoring": {
                         "State": "disabled"
                     },
-                    "Hypervisor": "xen",
+                    "VirtualizationType": "hvm",
+                    "SourceDestCheck": true,
+                    "Tags": [
+                        {
+                            "Key": "Name",
+                            "Value": "Nagios-test"
+                        }
+                    ],
+                    "PublicDnsName": "ec2-54-165-137-69.compute-1.amazonaws.com",
                     "SecurityGroups": [
                         {
                             "GroupName": "nagios-security-group",
@@ -99,20 +33,86 @@
                         }
                     ],
                     "Architecture": "x86_64",
-                    "VpcId": "vpc-bb5bcfde",
-                    "EbsOptimized": false,
+                    "PublicIpAddress": "54.165.137.69",
+                    "StateTransitionReason": null,
+                    "RootDeviceType": "ebs",
+                    "Hypervisor": "xen",
+                    "KeyName": "LabsKey",
                     "Placement": {
-                        "GroupName": null,
                         "Tenancy": "default",
+                        "GroupName": null,
                         "AvailabilityZone": "us-east-1c"
                     },
-                    "SourceDestCheck": true,
-                    "PublicIpAddress": "54.165.137.69"
+                    "ImageId": "ami-96a818fe",
+                    "VpcId": "vpc-bb5bcfde",
+                    "AmiLaunchIndex": 0,
+                    "SubnetId": "subnet-7902f252",
+                    "RootDeviceName": "/dev/sda1",
+                    "InstanceId": "i-c58ef324",
+                    "NetworkInterfaces": [
+                        {
+                            "Status": "in-use",
+                            "Description": "Primary network interface",
+                            "VpcId": "vpc-bb5bcfde",
+                            "SubnetId": "subnet-7902f252",
+                            "OwnerId": "816397707103",
+                            "Groups": [
+                                {
+                                    "GroupName": "nagios-security-group",
+                                    "GroupId": "sg-c614f5a2"
+                                }
+                            ],
+                            "Attachment": {
+                                "AttachmentId": "eni-attach-9e5d3ae3",
+                                "DeviceIndex": 0,
+                                "Status": "attached",
+                                "AttachTime": "2014-11-25T08:32:57.000Z",
+                                "DeleteOnTermination": true
+                            },
+                            "NetworkInterfaceId": "eni-0789d92d",
+                            "PrivateIpAddress": "172.17.187.223",
+                            "SourceDestCheck": true,
+                            "PrivateIpAddresses": [
+                                {
+                                    "PrivateDnsName": "ip-172-17-187-223.ec2.internal",
+                                    "PrivateIpAddress": "172.17.187.223",
+                                    "Association": {
+                                        "IpOwnerId": "amazon",
+                                        "PublicIp": "54.165.137.69",
+                                        "PublicDnsName": "ec2-54-165-137-69.compute-1.amazonaws.com"
+                                    },
+                                    "Primary": true
+                                }
+                            ],
+                            "PrivateDnsName": "ip-172-17-187-223.ec2.internal",
+                            "Association": {
+                                "IpOwnerId": "amazon",
+                                "PublicIp": "54.165.137.69",
+                                "PublicDnsName": "ec2-54-165-137-69.compute-1.amazonaws.com"
+                            }
+                        }
+                    ],
+                    "PrivateIpAddress": "172.17.187.223",
+                    "InstanceType": "t2.micro",
+                    "EbsOptimized": false,
+                    "State": {
+                        "Name": "running",
+                        "Code": 16
+                    },
+                    "LaunchTime": "2014-11-27T05:21:19.000Z",
+                    "BlockDeviceMappings": [
+                        {
+                            "Ebs": {
+                                "AttachTime": "2014-11-25T08:33:00.000Z",
+                                "VolumeId": "vol-423fb35a",
+                                "Status": "attached",
+                                "DeleteOnTermination": true
+                            },
+                            "DeviceName": "/dev/sda1"
+                        }
+                    ]
                 }
-            ],
-            "OwnerId": "816397707103",
-            "ReservationId": "r-8b4b8e65",
-            "Groups": []
+            ]
         }
     ]
 }
