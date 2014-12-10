@@ -1,113 +1,113 @@
 {
     "Reservations": [
         {
+            "ReservationId": "r-4912e6a7",
+            "OwnerId": "816397707103",
             "Instances": [
                 {
-                    "Tags": [
-                        {
-                            "Key": "Name",
-                            "Value": "cs01.virtual-labs.ac.in  DataStructures"
-                        }
-                    ],
-                    "Architecture": "x86_64",
-                    "AmiLaunchIndex": 0,
-                    "PublicIpAddress": "54.174.82.199",
                     "SubnetId": "subnet-7902f252",
-                    "Hypervisor": "xen",
-                    "Placement": {
-                        "AvailabilityZone": "us-east-1c",
-                        "Tenancy": "default",
-                        "GroupName": null
-                    },
+                    "RootDeviceType": "ebs",
+                    "InstanceType": "t2.micro",
                     "SecurityGroups": [
                         {
                             "GroupId": "sg-97253df2",
                             "GroupName": "ssh,hhtp,https,custom ICMP rule(all)"
                         }
                     ],
-                    "PublicDnsName": "ec2-54-174-82-199.compute-1.amazonaws.com",
-                    "SourceDestCheck": true,
-                    "PrivateIpAddress": "172.17.4.2",
-                    "KeyName": "LabsKey",
-                    "ProductCodes": [],
-                    "RootDeviceType": "ebs",
+                    "ImageId": "ami-3ce05354",
                     "State": {
-                        "Code": 16,
-                        "Name": "running"
+                        "Name": "running",
+                        "Code": 16
                     },
-                    "VirtualizationType": "hvm",
-                    "InstanceId": "i-a2147343",
+                    "BlockDeviceMappings": [
+                        {
+                            "Ebs": {
+                                "VolumeId": "vol-5654ed4e",
+                                "Status": "attached",
+                                "AttachTime": "2014-11-21T10:30:24.000Z",
+                                "DeleteOnTermination": true
+                            },
+                            "DeviceName": "/dev/sda1"
+                        }
+                    ],
+                    "LaunchTime": "2014-11-21T10:30:08.000Z",
+                    "RootDeviceName": "/dev/sda1",
+                    "ProductCodes": [],
                     "NetworkInterfaces": [
                         {
+                            "SubnetId": "subnet-7902f252",
+                            "NetworkInterfaceId": "eni-cf266fe5",
+                            "Status": "in-use",
+                            "SourceDestCheck": true,
+                            "VpcId": "vpc-bb5bcfde",
+                            "PrivateIpAddresses": [
+                                {
+                                    "PrivateIpAddress": "172.17.4.2",
+                                    "Association": {
+                                        "PublicDnsName": "ec2-54-174-82-199.compute-1.amazonaws.com",
+                                        "PublicIp": "54.174.82.199",
+                                        "IpOwnerId": "amazon"
+                                    },
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-172-17-4-2.ec2.internal"
+                                }
+                            ],
+                            "PrivateIpAddress": "172.17.4.2",
+                            "Description": "Primary network interface",
+                            "OwnerId": "816397707103",
                             "Groups": [
                                 {
                                     "GroupId": "sg-97253df2",
                                     "GroupName": "ssh,hhtp,https,custom ICMP rule(all)"
                                 }
                             ],
-                            "SubnetId": "subnet-7902f252",
-                            "Association": {
-                                "IpOwnerId": "amazon",
-                                "PublicIp": "54.174.82.199",
-                                "PublicDnsName": "ec2-54-174-82-199.compute-1.amazonaws.com"
-                            },
-                            "NetworkInterfaceId": "eni-cf266fe5",
-                            "SourceDestCheck": true,
-                            "Status": "in-use",
-                            "Description": "Primary network interface",
                             "PrivateDnsName": "ip-172-17-4-2.ec2.internal",
-                            "PrivateIpAddresses": [
-                                {
-                                    "Association": {
-                                        "IpOwnerId": "amazon",
-                                        "PublicIp": "54.174.82.199",
-                                        "PublicDnsName": "ec2-54-174-82-199.compute-1.amazonaws.com"
-                                    },
-                                    "Primary": true,
-                                    "PrivateIpAddress": "172.17.4.2",
-                                    "PrivateDnsName": "ip-172-17-4-2.ec2.internal"
-                                }
-                            ],
-                            "PrivateIpAddress": "172.17.4.2",
-                            "VpcId": "vpc-bb5bcfde",
-                            "OwnerId": "816397707103",
                             "Attachment": {
-                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "AttachTime": "2014-11-21T10:30:08.000Z",
                                 "AttachmentId": "eni-attach-b0c658cd",
-                                "Status": "attached",
                                 "DeviceIndex": 0,
-                                "AttachTime": "2014-11-21T10:30:08.000Z"
+                                "DeleteOnTermination": true
+                            },
+                            "Association": {
+                                "PublicDnsName": "ec2-54-174-82-199.compute-1.amazonaws.com",
+                                "PublicIp": "54.174.82.199",
+                                "IpOwnerId": "amazon"
                             }
                         }
                     ],
-                    "EbsOptimized": false,
-                    "RootDeviceName": "/dev/sda1",
-                    "PrivateDnsName": "ip-172-17-4-2.ec2.internal",
-                    "InstanceType": "t2.micro",
-                    "BlockDeviceMappings": [
-                        {
-                            "DeviceName": "/dev/sda1",
-                            "Ebs": {
-                                "DeleteOnTermination": true,
-                                "VolumeId": "vol-5654ed4e",
-                                "Status": "attached",
-                                "AttachTime": "2014-11-21T10:30:24.000Z"
-                            }
-                        }
-                    ],
+                    "AmiLaunchIndex": 0,
+                    "KeyName": "LabsKey",
+                    "Placement": {
+                        "AvailabilityZone": "us-east-1c",
+                        "Tenancy": "default",
+                        "GroupName": null
+                    },
+                    "ClientToken": "LqCNh1416565807651",
+                    "Hypervisor": "xen",
+                    "SourceDestCheck": true,
                     "StateTransitionReason": null,
+                    "Architecture": "x86_64",
+                    "VpcId": "vpc-bb5bcfde",
+                    "PublicIpAddress": "54.174.82.199",
+                    "VirtualizationType": "hvm",
+                    "PrivateIpAddress": "172.17.4.2",
                     "Monitoring": {
                         "State": "disabled"
                     },
-                    "LaunchTime": "2014-11-21T10:30:08.000Z",
-                    "ClientToken": "LqCNh1416565807651",
-                    "VpcId": "vpc-bb5bcfde",
-                    "ImageId": "ami-3ce05354"
+                    "EbsOptimized": false,
+                    "PrivateDnsName": "ip-172-17-4-2.ec2.internal",
+                    "PublicDnsName": "ec2-54-174-82-199.compute-1.amazonaws.com",
+                    "Tags": [
+                        {
+                            "Value": "cs01.virtual-labs.ac.in  DataStructures",
+                            "Key": "Name"
+                        }
+                    ],
+                    "InstanceId": "i-a2147343"
                 }
             ],
-            "Groups": [],
-            "OwnerId": "816397707103",
-            "ReservationId": "r-4912e6a7"
+            "Groups": []
         }
     ]
 }

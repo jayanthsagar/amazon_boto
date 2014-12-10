@@ -1,76 +1,12 @@
 {
     "Reservations": [
         {
-            "Groups": [],
-            "OwnerId": "816397707103",
-            "ReservationId": "r-e7917409",
             "Instances": [
                 {
-                    "EbsOptimized": false,
-                    "PrivateDnsName": "ip-172-17-2-3.ec2.internal",
-                    "RootDeviceType": "ebs",
-                    "NetworkInterfaces": [
-                        {
-                            "SourceDestCheck": true,
-                            "PrivateDnsName": "ip-172-17-2-3.ec2.internal",
-                            "Description": "Primary network interface",
-                            "Status": "in-use",
-                            "Attachment": {
-                                "DeleteOnTermination": true,
-                                "DeviceIndex": 0,
-                                "AttachmentId": "eni-attach-a7ad39da",
-                                "AttachTime": "2014-11-17T05:49:05.000Z",
-                                "Status": "attached"
-                            },
-                            "VpcId": "vpc-bb5bcfde",
-                            "NetworkInterfaceId": "eni-4c94ee66",
-                            "PrivateIpAddress": "172.17.2.3",
-                            "OwnerId": "816397707103",
-                            "PrivateIpAddresses": [
-                                {
-                                    "Primary": true,
-                                    "Association": {
-                                        "PublicIp": "54.174.107.182",
-                                        "PublicDnsName": "ec2-54-174-107-182.compute-1.amazonaws.com",
-                                        "IpOwnerId": "amazon"
-                                    },
-                                    "PrivateDnsName": "ip-172-17-2-3.ec2.internal",
-                                    "PrivateIpAddress": "172.17.2.3"
-                                }
-                            ],
-                            "Groups": [
-                                {
-                                    "GroupId": "sg-97253df2",
-                                    "GroupName": "ssh,hhtp,https,custom ICMP rule(all)"
-                                }
-                            ],
-                            "Association": {
-                                "PublicIp": "54.174.107.182",
-                                "PublicDnsName": "ec2-54-174-107-182.compute-1.amazonaws.com",
-                                "IpOwnerId": "amazon"
-                            },
-                            "SubnetId": "subnet-7902f252"
-                        }
-                    ],
-                    "RootDeviceName": "/dev/xvda",
-                    "InstanceType": "t2.micro",
-                    "VirtualizationType": "hvm",
-                    "Tags": [
-                        {
-                            "Key": "Name",
-                            "Value": "soumyaPriDNS"
-                        }
-                    ],
-                    "AmiLaunchIndex": 0,
-                    "PrivateIpAddress": "172.17.2.3",
-                    "Hypervisor": "xen",
-                    "LaunchTime": "2014-11-27T04:04:59.000Z",
-                    "InstanceId": "i-2e8c00cf",
-                    "SubnetId": "subnet-7902f252",
-                    "Architecture": "x86_64",
-                    "KeyName": "soumya-virginia",
-                    "SourceDestCheck": true,
-                    "PublicIpAddress": "54.174.107.182",
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "VpcId": "vpc-bb5bcfde",
                     "SecurityGroups": [
                         {
                             "GroupId": "sg-97253df2",
@@ -78,36 +14,100 @@
                         }
                     ],
                     "ImageId": "ami-943a85fc",
-                    "Monitoring": {
-                        "State": "disabled"
-                    },
+                    "PrivateDnsName": "ip-172-17-2-3.ec2.internal",
+                    "InstanceType": "t2.micro",
                     "Placement": {
                         "Tenancy": "default",
                         "GroupName": null,
                         "AvailabilityZone": "us-east-1c"
                     },
-                    "PublicDnsName": "ec2-54-174-107-182.compute-1.amazonaws.com",
+                    "PublicIpAddress": "54.174.107.182",
+                    "Architecture": "x86_64",
+                    "NetworkInterfaces": [
+                        {
+                            "NetworkInterfaceId": "eni-4c94ee66",
+                            "SubnetId": "subnet-7902f252",
+                            "VpcId": "vpc-bb5bcfde",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Association": {
+                                        "IpOwnerId": "amazon",
+                                        "PublicIp": "54.174.107.182",
+                                        "PublicDnsName": "ec2-54-174-107-182.compute-1.amazonaws.com"
+                                    },
+                                    "PrivateDnsName": "ip-172-17-2-3.ec2.internal",
+                                    "PrivateIpAddress": "172.17.2.3",
+                                    "Primary": true
+                                }
+                            ],
+                            "Association": {
+                                "IpOwnerId": "amazon",
+                                "PublicIp": "54.174.107.182",
+                                "PublicDnsName": "ec2-54-174-107-182.compute-1.amazonaws.com"
+                            },
+                            "PrivateDnsName": "ip-172-17-2-3.ec2.internal",
+                            "OwnerId": "816397707103",
+                            "PrivateIpAddress": "172.17.2.3",
+                            "Attachment": {
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "AttachmentId": "eni-attach-a7ad39da",
+                                "DeviceIndex": 0,
+                                "AttachTime": "2014-11-17T05:49:05.000Z"
+                            },
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "Description": "Primary network interface",
+                            "Groups": [
+                                {
+                                    "GroupId": "sg-97253df2",
+                                    "GroupName": "ssh,hhtp,https,custom ICMP rule(all)"
+                                }
+                            ]
+                        }
+                    ],
                     "BlockDeviceMappings": [
                         {
-                            "DeviceName": "/dev/xvda",
                             "Ebs": {
                                 "VolumeId": "vol-a008a1b8",
                                 "DeleteOnTermination": false,
-                                "AttachTime": "2014-11-17T05:49:08.000Z",
-                                "Status": "attached"
-                            }
+                                "Status": "attached",
+                                "AttachTime": "2014-11-17T05:49:08.000Z"
+                            },
+                            "DeviceName": "/dev/xvda"
                         }
                     ],
+                    "EbsOptimized": false,
+                    "VirtualizationType": "hvm",
+                    "SubnetId": "subnet-7902f252",
+                    "InstanceId": "i-2e8c00cf",
+                    "KeyName": "soumya-virginia",
+                    "PublicDnsName": "ec2-54-174-107-182.compute-1.amazonaws.com",
                     "ClientToken": "xEmDh1416203344871",
-                    "StateTransitionReason": null,
-                    "VpcId": "vpc-bb5bcfde",
+                    "LaunchTime": "2014-11-27T04:04:59.000Z",
+                    "PrivateIpAddress": "172.17.2.3",
+                    "Hypervisor": "xen",
+                    "Tags": [
+                        {
+                            "Key": "Name",
+                            "Value": "soumyaPriDNS"
+                        }
+                    ],
                     "ProductCodes": [],
+                    "SourceDestCheck": true,
+                    "RootDeviceType": "ebs",
+                    "AmiLaunchIndex": 0,
+                    "StateTransitionReason": null,
                     "State": {
-                        "Name": "running",
-                        "Code": 16
-                    }
+                        "Code": 16,
+                        "Name": "running"
+                    },
+                    "RootDeviceName": "/dev/xvda"
                 }
-            ]
+            ],
+            "ReservationId": "r-e7917409",
+            "OwnerId": "816397707103",
+            "Groups": []
         }
     ]
 }

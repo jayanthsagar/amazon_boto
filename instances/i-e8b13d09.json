@@ -4,28 +4,58 @@
             "OwnerId": "816397707103",
             "Instances": [
                 {
+                    "StateTransitionReason": null,
+                    "PrivateIpAddress": "172.17.2.2",
+                    "EbsOptimized": false,
+                    "Placement": {
+                        "GroupName": null,
+                        "Tenancy": "default",
+                        "AvailabilityZone": "us-east-1c"
+                    },
+                    "Hypervisor": "xen",
                     "RootDeviceType": "ebs",
-                    "InstanceId": "i-e8b13d09",
-                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-74da531c",
                     "LaunchTime": "2014-11-27T04:26:20.000Z",
-                    "PublicDnsName": "ec2-54-85-93-7.compute-1.amazonaws.com",
-                    "ProductCodes": [],
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "ssh,hhtp,https,custom ICMP rule(all)",
+                            "GroupId": "sg-97253df2"
+                        }
+                    ],
                     "VpcId": "vpc-bb5bcfde",
+                    "ProductCodes": [],
+                    "SubnetId": "subnet-7902f252",
+                    "PrivateDnsName": "ip-172-17-2-2.ec2.internal",
+                    "BlockDeviceMappings": [
+                        {
+                            "Ebs": {
+                                "DeleteOnTermination": false,
+                                "Status": "attached",
+                                "AttachTime": "2014-11-17T06:49:20.000Z",
+                                "VolumeId": "vol-b6e941ae"
+                            },
+                            "DeviceName": "/dev/sda1"
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
                     "SourceDestCheck": true,
+                    "PublicIpAddress": "54.85.93.7",
+                    "ClientToken": "rWtqY1416206955759",
+                    "AmiLaunchIndex": 0,
+                    "PublicDnsName": "ec2-54-85-93-7.compute-1.amazonaws.com",
+                    "InstanceId": "i-e8b13d09",
+                    "Architecture": "x86_64",
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "State": {
+                        "Code": 16,
+                        "Name": "running"
+                    },
+                    "KeyName": "soumya-virginia",
+                    "InstanceType": "t2.micro",
                     "NetworkInterfaces": [
                         {
-                            "OwnerId": "816397707103",
-                            "PrivateDnsName": "ip-172-17-2-2.ec2.internal",
-                            "Status": "in-use",
-                            "Groups": [
-                                {
-                                    "GroupId": "sg-97253df2",
-                                    "GroupName": "ssh,hhtp,https,custom ICMP rule(all)"
-                                }
-                            ],
-                            "Description": "Primary network interface",
-                            "VpcId": "vpc-bb5bcfde",
-                            "SourceDestCheck": true,
                             "PrivateIpAddresses": [
                                 {
                                     "Association": {
@@ -33,77 +63,47 @@
                                         "PublicIp": "54.85.93.7",
                                         "PublicDnsName": "ec2-54-85-93-7.compute-1.amazonaws.com"
                                     },
-                                    "PrivateDnsName": "ip-172-17-2-2.ec2.internal",
                                     "PrivateIpAddress": "172.17.2.2",
+                                    "PrivateDnsName": "ip-172-17-2-2.ec2.internal",
                                     "Primary": true
                                 }
                             ],
-                            "NetworkInterfaceId": "eni-59f38973",
+                            "OwnerId": "816397707103",
+                            "PrivateIpAddress": "172.17.2.2",
+                            "SourceDestCheck": true,
                             "Attachment": {
                                 "DeleteOnTermination": true,
-                                "AttachTime": "2014-11-17T06:49:16.000Z",
-                                "AttachmentId": "eni-attach-895acef4",
                                 "Status": "attached",
-                                "DeviceIndex": 0
+                                "DeviceIndex": 0,
+                                "AttachTime": "2014-11-17T06:49:16.000Z",
+                                "AttachmentId": "eni-attach-895acef4"
                             },
+                            "Status": "in-use",
                             "Association": {
                                 "IpOwnerId": "816397707103",
                                 "PublicIp": "54.85.93.7",
                                 "PublicDnsName": "ec2-54-85-93-7.compute-1.amazonaws.com"
                             },
-                            "SubnetId": "subnet-7902f252",
-                            "PrivateIpAddress": "172.17.2.2"
+                            "PrivateDnsName": "ip-172-17-2-2.ec2.internal",
+                            "Groups": [
+                                {
+                                    "GroupName": "ssh,hhtp,https,custom ICMP rule(all)",
+                                    "GroupId": "sg-97253df2"
+                                }
+                            ],
+                            "Description": "Primary network interface",
+                            "VpcId": "vpc-bb5bcfde",
+                            "NetworkInterfaceId": "eni-59f38973",
+                            "SubnetId": "subnet-7902f252"
                         }
                     ],
-                    "StateTransitionReason": null,
-                    "BlockDeviceMappings": [
-                        {
-                            "DeviceName": "/dev/sda1",
-                            "Ebs": {
-                                "DeleteOnTermination": false,
-                                "AttachTime": "2014-11-17T06:49:20.000Z",
-                                "VolumeId": "vol-b6e941ae",
-                                "Status": "attached"
-                            }
-                        }
-                    ],
-                    "VirtualizationType": "hvm",
-                    "ImageId": "ami-74da531c",
-                    "ClientToken": "rWtqY1416206955759",
-                    "State": {
-                        "Name": "running",
-                        "Code": 16
-                    },
-                    "SubnetId": "subnet-7902f252",
-                    "Placement": {
-                        "AvailabilityZone": "us-east-1c",
-                        "GroupName": null,
-                        "Tenancy": "default"
-                    },
-                    "KeyName": "soumya-virginia",
-                    "PrivateDnsName": "ip-172-17-2-2.ec2.internal",
-                    "EbsOptimized": false,
-                    "Monitoring": {
-                        "State": "disabled"
-                    },
                     "Tags": [
                         {
                             "Key": "Name",
                             "Value": "ReverseProxy"
                         }
                     ],
-                    "SecurityGroups": [
-                        {
-                            "GroupId": "sg-97253df2",
-                            "GroupName": "ssh,hhtp,https,custom ICMP rule(all)"
-                        }
-                    ],
-                    "Architecture": "x86_64",
-                    "InstanceType": "t2.micro",
-                    "Hypervisor": "xen",
-                    "PublicIpAddress": "54.85.93.7",
-                    "RootDeviceName": "/dev/sda1",
-                    "PrivateIpAddress": "172.17.2.2"
+                    "RootDeviceName": "/dev/sda1"
                 }
             ],
             "Groups": [],

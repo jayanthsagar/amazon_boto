@@ -2,110 +2,110 @@
     "Reservations": [
         {
             "OwnerId": "816397707103",
+            "Groups": [],
             "ReservationId": "r-6aae4584",
             "Instances": [
                 {
-                    "SubnetId": "subnet-7902f252",
-                    "EbsOptimized": false,
-                    "Placement": {
-                        "GroupName": null,
-                        "AvailabilityZone": "us-east-1c",
-                        "Tenancy": "default"
-                    },
-                    "PublicDnsName": null,
                     "InstanceId": "i-24cc54c5",
-                    "State": {
-                        "Name": "stopped",
-                        "Code": 80
-                    },
-                    "VpcId": "vpc-bb5bcfde",
-                    "InstanceType": "t2.micro",
-                    "RootDeviceType": "ebs",
-                    "Monitoring": {
-                        "State": "disabled"
-                    },
-                    "ProductCodes": [
-                        {
-                            "ProductCodeId": "6x5jmcajty9edm3f211pqjfn2",
-                            "ProductCodeType": "marketplace"
-                        }
-                    ],
-                    "VirtualizationType": "hvm",
-                    "ImageId": "ami-c2a818aa",
-                    "Hypervisor": "xen",
-                    "SecurityGroups": [
-                        {
-                            "GroupId": "sg-97253df2",
-                            "GroupName": "ssh,hhtp,https,custom ICMP rule(all)"
-                        }
-                    ],
-                    "AmiLaunchIndex": 0,
-                    "Architecture": "x86_64",
-                    "KeyName": "LabsKey",
-                    "BlockDeviceMappings": [
-                        {
-                            "DeviceName": "/dev/sda1",
-                            "Ebs": {
-                                "Status": "attached",
-                                "DeleteOnTermination": false,
-                                "AttachTime": "2014-11-20T13:37:25.000Z",
-                                "VolumeId": "vol-9bc67a83"
-                            }
-                        }
-                    ],
-                    "NetworkInterfaces": [
-                        {
-                            "SubnetId": "subnet-7902f252",
-                            "Description": "Primary network interface",
-                            "NetworkInterfaceId": "eni-d79dd1fd",
-                            "PrivateIpAddress": "172.17.4.21",
-                            "Status": "in-use",
-                            "PrivateIpAddresses": [
-                                {
-                                    "Primary": true,
-                                    "PrivateDnsName": "ip-172-17-4-21.ec2.internal",
-                                    "PrivateIpAddress": "172.17.4.21"
-                                }
-                            ],
-                            "OwnerId": "816397707103",
-                            "VpcId": "vpc-bb5bcfde",
-                            "Attachment": {
-                                "AttachmentId": "eni-attach-33cf534e",
-                                "DeviceIndex": 0,
-                                "Status": "attached",
-                                "DeleteOnTermination": true,
-                                "AttachTime": "2014-11-20T13:37:22.000Z"
-                            },
-                            "PrivateDnsName": "ip-172-17-4-21.ec2.internal",
-                            "SourceDestCheck": false,
-                            "Groups": [
-                                {
-                                    "GroupId": "sg-97253df2",
-                                    "GroupName": "ssh,hhtp,https,custom ICMP rule(all)"
-                                }
-                            ]
-                        }
-                    ],
-                    "PrivateIpAddress": "172.17.4.21",
-                    "LaunchTime": "2014-11-25T04:11:14.000Z",
-                    "StateTransitionReason": "User initiated (2014-11-25 04:20:15 GMT)",
-                    "SourceDestCheck": false,
-                    "StateReason": {
-                        "Message": "Client.UserInitiatedShutdown: User initiated shutdown",
-                        "Code": "Client.UserInitiatedShutdown"
-                    },
-                    "ClientToken": "kizRm1416490642122",
-                    "RootDeviceName": "/dev/sda1",
                     "Tags": [
                         {
                             "Value": "oVZ kernel test",
                             "Key": "Name"
                         }
                     ],
-                    "PrivateDnsName": "ip-172-17-4-21.ec2.internal"
+                    "ProductCodes": [
+                        {
+                            "ProductCodeId": "6x5jmcajty9edm3f211pqjfn2",
+                            "ProductCodeType": "marketplace"
+                        }
+                    ],
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "VpcId": "vpc-bb5bcfde",
+                    "Hypervisor": "xen",
+                    "SubnetId": "subnet-7902f252",
+                    "InstanceType": "t2.micro",
+                    "StateReason": {
+                        "Code": "Client.UserInitiatedShutdown",
+                        "Message": "Client.UserInitiatedShutdown: User initiated shutdown"
+                    },
+                    "RootDeviceName": "/dev/sda1",
+                    "ClientToken": "kizRm1416490642122",
+                    "KeyName": "LabsKey",
+                    "AmiLaunchIndex": 0,
+                    "EbsOptimized": false,
+                    "ImageId": "ami-c2a818aa",
+                    "PublicDnsName": null,
+                    "PrivateDnsName": "ip-172-17-4-21.ec2.internal",
+                    "StateTransitionReason": "User initiated (2014-11-25 04:20:15 GMT)",
+                    "State": {
+                        "Code": 80,
+                        "Name": "stopped"
+                    },
+                    "NetworkInterfaces": [
+                        {
+                            "PrivateIpAddress": "172.17.4.21",
+                            "PrivateDnsName": "ip-172-17-4-21.ec2.internal",
+                            "Groups": [
+                                {
+                                    "GroupName": "ssh,hhtp,https,custom ICMP rule(all)",
+                                    "GroupId": "sg-97253df2"
+                                }
+                            ],
+                            "Status": "in-use",
+                            "VpcId": "vpc-bb5bcfde",
+                            "PrivateIpAddresses": [
+                                {
+                                    "PrivateIpAddress": "172.17.4.21",
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-172-17-4-21.ec2.internal"
+                                }
+                            ],
+                            "SubnetId": "subnet-7902f252",
+                            "Description": "Primary network interface",
+                            "NetworkInterfaceId": "eni-d79dd1fd",
+                            "OwnerId": "816397707103",
+                            "SourceDestCheck": false,
+                            "Attachment": {
+                                "AttachmentId": "eni-attach-33cf534e",
+                                "DeviceIndex": 0,
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "AttachTime": "2014-11-20T13:37:22.000Z"
+                            }
+                        }
+                    ],
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/sda1",
+                            "Ebs": {
+                                "DeleteOnTermination": false,
+                                "VolumeId": "vol-9bc67a83",
+                                "Status": "attached",
+                                "AttachTime": "2014-11-20T13:37:25.000Z"
+                            }
+                        }
+                    ],
+                    "Placement": {
+                        "GroupName": null,
+                        "AvailabilityZone": "us-east-1c",
+                        "Tenancy": "default"
+                    },
+                    "PrivateIpAddress": "172.17.4.21",
+                    "RootDeviceType": "ebs",
+                    "Architecture": "x86_64",
+                    "VirtualizationType": "hvm",
+                    "LaunchTime": "2014-11-25T04:11:14.000Z",
+                    "SourceDestCheck": false,
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "ssh,hhtp,https,custom ICMP rule(all)",
+                            "GroupId": "sg-97253df2"
+                        }
+                    ]
                 }
-            ],
-            "Groups": []
+            ]
         }
     ]
 }

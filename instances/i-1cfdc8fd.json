@@ -2,44 +2,50 @@
     "Reservations": [
         {
             "ReservationId": "r-98dc7b76",
+            "Groups": [],
+            "OwnerId": "816397707103",
             "Instances": [
                 {
-                    "SecurityGroups": [
-                        {
-                            "GroupId": "sg-eb7c9d8f",
-                            "GroupName": "LabsSecurity"
-                        }
-                    ],
-                    "PrivateDnsName": "ip-172-17-236-193.ec2.internal",
-                    "PublicDnsName": null,
-                    "Tags": [
-                        {
-                            "Value": "test-nrpescript",
-                            "Key": "Name"
-                        }
-                    ],
-                    "PrivateIpAddress": "172.17.236.193",
-                    "Architecture": "x86_64",
+                    "RootDeviceType": "ebs",
+                    "StateReason": {
+                        "Code": "Client.UserInitiatedShutdown",
+                        "Message": "Client.UserInitiatedShutdown: User initiated shutdown"
+                    },
+                    "LaunchTime": "2014-12-04T11:39:50.000Z",
                     "Monitoring": {
                         "State": "disabled"
                     },
-                    "ProductCodes": [
+                    "InstanceId": "i-1cfdc8fd",
+                    "PrivateIpAddress": "172.17.236.193",
+                    "EbsOptimized": false,
+                    "SecurityGroups": [
                         {
-                            "ProductCodeId": "aw0evgkw8e5c1q413zgy5pjce",
-                            "ProductCodeType": "marketplace"
+                            "GroupName": "LabsSecurity",
+                            "GroupId": "sg-eb7c9d8f"
                         }
                     ],
-                    "ImageId": "ami-96a818fe",
+                    "StateTransitionReason": "User initiated (2014-12-04 14:45:02 GMT)",
                     "NetworkInterfaces": [
                         {
-                            "OwnerId": "816397707103",
+                            "SourceDestCheck": true,
+                            "NetworkInterfaceId": "eni-c9cae4e3",
+                            "Description": "Primary network interface",
+                            "Status": "in-use",
                             "Attachment": {
-                                "DeleteOnTermination": true,
-                                "AttachTime": "2014-12-04T10:45:20.000Z",
-                                "DeviceIndex": 0,
+                                "Status": "attached",
                                 "AttachmentId": "eni-attach-e6e89e9b",
-                                "Status": "attached"
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "AttachTime": "2014-12-04T10:45:20.000Z"
                             },
+                            "OwnerId": "816397707103",
+                            "PrivateIpAddress": "172.17.236.193",
+                            "Groups": [
+                                {
+                                    "GroupName": "LabsSecurity",
+                                    "GroupId": "sg-eb7c9d8f"
+                                }
+                            ],
                             "PrivateIpAddresses": [
                                 {
                                     "PrivateDnsName": "ip-172-17-236-193.ec2.internal",
@@ -47,65 +53,59 @@
                                     "PrivateIpAddress": "172.17.236.193"
                                 }
                             ],
-                            "PrivateIpAddress": "172.17.236.193",
                             "PrivateDnsName": "ip-172-17-236-193.ec2.internal",
-                            "Status": "in-use",
                             "SubnetId": "subnet-7902f252",
-                            "Groups": [
-                                {
-                                    "GroupId": "sg-eb7c9d8f",
-                                    "GroupName": "LabsSecurity"
-                                }
-                            ],
-                            "Description": "Primary network interface",
-                            "NetworkInterfaceId": "eni-c9cae4e3",
-                            "VpcId": "vpc-bb5bcfde",
-                            "SourceDestCheck": true
+                            "VpcId": "vpc-bb5bcfde"
                         }
                     ],
-                    "VirtualizationType": "hvm",
-                    "VpcId": "vpc-bb5bcfde",
-                    "StateReason": {
-                        "Code": "Client.UserInitiatedShutdown",
-                        "Message": "Client.UserInitiatedShutdown: User initiated shutdown"
-                    },
-                    "ClientToken": "141768980030290626",
-                    "AmiLaunchIndex": 0,
-                    "EbsOptimized": false,
+                    "PublicDnsName": null,
+                    "ProductCodes": [
+                        {
+                            "ProductCodeId": "aw0evgkw8e5c1q413zgy5pjce",
+                            "ProductCodeType": "marketplace"
+                        }
+                    ],
+                    "PrivateDnsName": "ip-172-17-236-193.ec2.internal",
                     "BlockDeviceMappings": [
                         {
+                            "DeviceName": "/dev/sda1",
                             "Ebs": {
-                                "AttachTime": "2014-12-04T10:45:23.000Z",
-                                "DeleteOnTermination": false,
+                                "Status": "attached",
                                 "VolumeId": "vol-9afd9e82",
-                                "Status": "attached"
-                            },
-                            "DeviceName": "/dev/sda1"
+                                "DeleteOnTermination": false,
+                                "AttachTime": "2014-12-04T10:45:23.000Z"
+                            }
                         }
                     ],
-                    "KeyName": "LabsKey",
-                    "InstanceId": "i-1cfdc8fd",
+                    "SourceDestCheck": true,
+                    "VirtualizationType": "hvm",
+                    "InstanceType": "t2.micro",
+                    "ImageId": "ami-96a818fe",
                     "Hypervisor": "xen",
+                    "Tags": [
+                        {
+                            "Key": "Name",
+                            "Value": "test-nrpescript"
+                        }
+                    ],
+                    "ClientToken": "141768980030290626",
+                    "KeyName": "LabsKey",
                     "RootDeviceName": "/dev/sda1",
                     "State": {
                         "Code": 80,
                         "Name": "stopped"
                     },
-                    "LaunchTime": "2014-12-04T11:39:50.000Z",
-                    "StateTransitionReason": "User initiated (2014-12-04 14:45:02 GMT)",
-                    "RootDeviceType": "ebs",
-                    "Placement": {
-                        "Tenancy": "default",
-                        "GroupName": null,
-                        "AvailabilityZone": "us-east-1c"
-                    },
+                    "AmiLaunchIndex": 0,
                     "SubnetId": "subnet-7902f252",
-                    "InstanceType": "t2.micro",
-                    "SourceDestCheck": true
+                    "Placement": {
+                        "AvailabilityZone": "us-east-1c",
+                        "GroupName": null,
+                        "Tenancy": "default"
+                    },
+                    "Architecture": "x86_64",
+                    "VpcId": "vpc-bb5bcfde"
                 }
-            ],
-            "OwnerId": "816397707103",
-            "Groups": []
+            ]
         }
     ]
 }
