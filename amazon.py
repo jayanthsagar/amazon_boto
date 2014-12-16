@@ -1,5 +1,5 @@
 import boto.ec2
-#import os
+import os
 import sys
 import subprocess
 import json
@@ -41,11 +41,28 @@ def instance_details():
 		#	print instance.placement
 		#	print instance.state
 	return instances_id	
+def create_instance():
+	#image = conn.get_all_images() #for getting ami stored in amazon account
+	image = "ami-bc8131d4" #for now using same ami to create instance, later will get our own ami with necessary modifications
+	subnet = "subnet-7902f252"
+	security_group_id = "sg-c614f5a2"
+	key = "cli-test" #using cli-test.pem for now
+	result = os.system("aws ec2 run-instances --image-id "+image+" --count 1 --instance-type t1.micro  --subnet-id "+subnet+" --security-group-ids "+security_group_id+" --associate-public-ip-address --key-name "+key)
+	print type(result)
+
+def start_instance():
+
+def stop_instance():
+
+def destroy_instance():
 
 
 #list_reservations()
 #list_instances()
-print instance_details() #returns a list of all instance ids and write instance info as json to instances folder
+#print instance_details() 
+#create_instance()
+destroy_instance()
+#returns a list of all instance ids and write instance info as json to instances folder
 def instance_address():
 	address = boto.ec2.address.Address()
 	print address
