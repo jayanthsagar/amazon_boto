@@ -73,7 +73,7 @@ def create_instance_with_userdata():
 	./centos_prepare_ovpl.sh
 	echo END"""
 
-	ec2conn = EC2Connection(region = us-east-1c)
+	ec2conn = EC2Connection()
 	result = ec2conn.run_instances(image, instance_type = 't2.micro', key_name = key, user_data = test_script )
 	# Using boto EC2Connection class
 	instance = result.instances[0]
