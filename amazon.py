@@ -1,13 +1,16 @@
+import boto
+from boto.ec2 import EC2Connection
 import boto.ec2
 import os
 import sys
 import subprocess
 import json
+import time
 #import commands
 conn = boto.ec2.connect_to_region("us-east-1")
 print conn
 reservations = conn.get_all_reservations()
-reservations
+print reservations
 def list_reservations():
 	for i in range(0,len(reservations)):
 		print reservations[i]
@@ -48,20 +51,49 @@ def create_instance():
 	security_group_id = "sg-c614f5a2"
 	key = "cli-test" #using cli-test.pem for now
 	result = os.system("aws ec2 run-instances --image-id "+image+" --count 1 --instance-type t1.micro  --subnet-id "+subnet+" --security-group-ids "+security_group_id+" --associate-public-ip-address --key-name "+key)
+	# Using awscli command
 	print type(result)
 
+def create_instance_with_userdata():
+	image = "ami-c2a818aa"
+	subnet = "subnet-7902f252"
+	security_group_id = "sg-c614f5a2"
+	key = "VLEAD-keypair"
+	test_script = """#!/bin/bash -ex
+	exec > >(tee /var/log/user-data.log|logger -t user-data -s 2>/dev/console) 2>&1
+	wget https://github.com/vlead/setup-ovpl-centos/archive/v1.0.0.tar.gz
+	echo BEGIN
+	date '+%Y-%m-%d %H:%M:%S'
+	yum install -y git
+	git clone https://github.com/vlead/setup-ovpl-centos.git
+	git checkout develop
+
+	cd setup-ovpl-centos/scripts
+
+	./centos_prepare_ovpl.sh
+	echo END"""
+
+	ec2conn = EC2Connection(region = us-east-1c)
+	result = ec2conn.run_instances(image, instance_type = 't2.micro', key_name = key, user_data = test_script )
+	# Using boto EC2Connection class
+	instance = result.instances[0]
+	while not instance.update() == 'running':
+		time.sleep(5)
+	print instance
 def start_instance():
-
+	pass
 def stop_instance():
-
+	pass
 def destroy_instance():
+	pass
 
 
 #list_reservations()
 #list_instances()
 #print instance_details() 
 #create_instance()
-destroy_instance()
+#destroy_instance()
+create_instance_with_userdata()
 #returns a list of all instance ids and write instance info as json to instances folder
 def instance_address():
 	address = boto.ec2.address.Address()
