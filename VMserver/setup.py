@@ -7,7 +7,6 @@ setup.py
 from setuptools import setup
 requires = ['tornado',
 	'requests',
-	'pymongo',
 	'netaddr',
 	'sh'
 ]
