@@ -5,7 +5,9 @@ setup.py
 :license: MIT License.
 """
 from setuptools import setup
-requires = ['tornado',
+requires = ['boto',
+	'tornado',
+	'logging',
 	'requests',
 	'netaddr',
 	'sh'

@@ -1,0 +1,23 @@
+
+<html>
+<head>
+<title>{% block title %}AMAZON{% end %}</title>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+<style type="text/css">{% block CSS %}{% end %}</style>
+</head>
+<body>
+<div id="container">
+<header>
+<h2><img src="http://vlead.virtual-labs.ac.in/VLEAD.png" width = "150" height = "100"></img>{% block header %}AMAZON{% end %}</h2>
+</header>
+<div id="main">
+{% block body %}{% end %}
+</div>
+<footer>
+{% block footer %}
+<a href="http://github.com/jayanthsagar/amazon_boto">Repo on Github</a>
+{% end %}
+</footer>
+</div>
+</body>
+</html>
