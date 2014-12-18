@@ -57,15 +57,17 @@ class Amazon:
 		instances = [i for r in reservations for i in r.instances]
 		print instances
 		print "######################################################################"
+		a  = []
 		for i in instances:
 			#pprint(i.__dict__)
 			details = i.__dict__
 			keys = details.keys()
 			if "ip_address" in keys and str(details.get('_state'))=='running(16)':
-				print details.get('ip_address')
+				 a.append[(details.get('ip_address'),details.get('private_ip_address'),details.get('id')]
+		return  a #details.get('ip_address')
 
 
 a = Amazon()
 #.request_instances(2)
-a.get_instance_details()
+#a.get_instance_details()
 #a.get_instances_on_vpc('vpc-9aa038ff')
