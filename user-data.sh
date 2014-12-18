@@ -5,10 +5,8 @@ echo BEGIN
 date '+%Y-%m-%d %H:%M:%S'
 yum install -y git
 git clone https://github.com/vlead/setup-ovpl-centos.git
-git checkout develop
-
 cd setup-ovpl-centos/scripts
-
+git checkout develop
 ./centos_prepare_ovpl.sh
 echo END
 
