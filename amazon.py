@@ -54,32 +54,44 @@ def create_instance():
 	# Using awscli command
 	print type(result)
 
-def create_instance_with_userdata():
-	image = "ami-c2a818aa"
-	subnet = "subnet-7902f252"
-	security_group_id = "sg-c614f5a2"
-	key = "VLEAD-keypair"
-	test_script = """#!/bin/bash -ex
-	exec > >(tee /var/log/user-data.log|logger -t user-data -s 2>/dev/console) 2>&1
-	wget https://github.com/vlead/setup-ovpl-centos/archive/v1.0.0.tar.gz
-	echo BEGIN
-	date '+%Y-%m-%d %H:%M:%S'
-	yum install -y git
-	git clone https://github.com/vlead/setup-ovpl-centos.git
-	git checkout develop
+def create_instance_with_userdata(num):
+	image = "ami-769efd1e"
+	subnet = "subnet-e30cccc8"
+	security_group_id = "sg-f96f9d9d"
+	key = "LabsKey"
+	number = num
+	#test_script = """#!/bin/bash -ex
+	#exec > >(tee /var/log/user-data.log|logger -t user-data -s 2>/dev/console) 2>&1
+	#wget https://github.com/vlead/setup-ovpl-centos/archive/v1.0.0.tar.gz
+	#echo BEGIN
+	#date '+%Y-%m-%d %H:%M:%S'
+	#yum install -y git
+	#git clone https://github.com/vlead/setup-ovpl-centos.git
+	#git checkout develop
 
-	cd setup-ovpl-centos/scripts
+	#cd setup-ovpl-centos/scripts
 
-	./centos_prepare_ovpl.sh
-	echo END"""
+	#./centos_prepare_ovpl.sh
+	#echo END"""
 
 	ec2conn = EC2Connection()
-	result = ec2conn.run_instances(image, instance_type = 't2.micro', key_name = key, user_data = test_script )
+	reservation = ec2conn.run_instances(image, max_count = number, instance_type = 't2.micro', key_name = key,placement = "us-east-1c" )
 	# Using boto EC2Connection class
-	instance = result.instances[0]
-	while not instance.update() == 'running':
-		time.sleep(5)
-	print instance
+	for instance in reservation.instances:
+		if instance.update() == u'running':
+			print "Instance "+instance+" is running"  
+			break
+		else:
+			while 1:
+				time.sleep(5)
+				if instance.update() == u'running':
+					print "Instance ",instance," is running"
+					break
+				else:
+					continue
+	#while not instance.update() == 'running':
+	#	time.sleep(5)
+	
 def start_instance():
 	pass
 def stop_instance():
@@ -90,10 +102,10 @@ def destroy_instance():
 
 #list_reservations()
 #list_instances()
-#print instance_details() 
+print instance_details() 
 #create_instance()
 #destroy_instance()
-create_instance_with_userdata()
+#create_instance_with_userdata(1)
 #returns a list of all instance ids and write instance info as json to instances folder
 def instance_address():
 	address = boto.ec2.address.Address()
