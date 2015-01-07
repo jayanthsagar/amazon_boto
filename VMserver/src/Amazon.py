@@ -50,21 +50,35 @@ class Amazon:
 
 			
 
-	def get_instances_on_vpc(vid):
+	def get_instances_on_vpc(self,vid):
 		vpc_id = vid
 		reservations = connect.get_all_instances()
 
 		instances = [i for r in reservations for i in r.instances]
 		print instances
 		print "######################################################################"
-		a  = []
+		#a  = []
+		f = open("result.html",'w')
+		f.write("""<table style="width:100%">
+  						<tr>
+    						<td>Public-ip</td>
+    						<td>Private-ip</td>		
+    						<td>instance-id</td>
+    					</tr>""")
 		for i in instances:
 			#pprint(i.__dict__)
 			details = i.__dict__
 			keys = details.keys()
-			if "ip_address" in keys and str(details.get('_state'))=='running(16)':
-				 a.append[(details.get('ip_address'),details.get('private_ip_address'),details.get('id')]
-		return  a #details.get('ip_address')
+			if "ip_address" in keys and str(details.get('_state'))=='running(16)' and details.get('vpc_id')=='vpc-9aa038ff':
+				f.write("""<tr>
+					           <td>%s</td>
+    						   <td>%s</td>		
+    						   <td>%s</td>
+    					    </tr>""",str(details.get('ip_address')).strip("u"),str(details.get('private_ip_address')).strip("u"),str(details.get('id')).strip("u"))
+		f.write("""
+			</table>""")
+		f.close()
+		return True #details.get('ip_address')
 
 
 a = Amazon()
