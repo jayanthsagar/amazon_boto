@@ -29,14 +29,14 @@ class MainHandler(tornado.web.RequestHandler):
 		#self.write(c.create_instances(post_data['number_of_vm']))
 		c.create_instances(post_data['number_of_vm'])
 		result = c.get_instances_on_vpc('vpc-9aa038ff')
-		if(result == True)
+		if(result == True):
 		    self.render('result.html')
 		print "Got request for "+post_data['number_of_vm']+"VMs"
 
 class VMDetails(tornado.web.RequestHandler):
     def get(self, command):
     	result = c.get_instances_on_vpc('vpc-9aa038ff')
-		if(result == True)
+		if(result == True):
 		    self.render('result.html')
 		        
 
