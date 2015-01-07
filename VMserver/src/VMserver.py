@@ -36,8 +36,8 @@ class MainHandler(tornado.web.RequestHandler):
 class VMDetails(tornado.web.RequestHandler):
     def get(self, command):
     	result = c.get_instances_on_vpc('vpc-9aa038ff')
-		if(result == True):
-		    self.render('result.html')
+	if(result == True):
+	    self.render('result.html')
 		        
 
 if __name__ == "__main__":
