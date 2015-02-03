@@ -11,7 +11,7 @@ from pprint import pprint
 connect = EC2Connection()
 
 class Amazon:
-	def request_instances(self, num):
+	def create_instances(self, num):
 		image = "ami-769efd1e"
 		subnet = "subnet-e30cccc8"
 		security_group_id = ['sg-f96f9d9d']
